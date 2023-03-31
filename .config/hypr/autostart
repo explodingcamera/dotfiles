@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+scripts=$HOME/Scripts
+
+
+/usr/lib/polkit-kde-authentication-agent-1 &
+
+killall dunst
+dunst &
+
+# wallpaper
+swww init
+$scripts/update_wallpaper &
+
+# waybar
+$scripts/launch_waybar &
+sleep 2
+
+pasystray &
+nm-applet &
+jellyfin-mpv-shim &
+
+# applets
+env XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway QT_QPA_PLATFORM=wayland flameshot &
+export $(dbus-launch) 
