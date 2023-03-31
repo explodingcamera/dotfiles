@@ -1,0 +1,106 @@
+@define-color tray #181818;
+@define-color highlight #1a1c2c;
+@define-color text #f8f8f2;
+@define-color base05 #d8d8d8;
+@define-color base0C #86c1b9;
+@define-color base0F #a16946;
+
+* {
+  transition: none;
+  box-shadow: none;
+}
+
+#waybar {
+  font-family: "Victor Mono", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: @text;
+  background: rgba(0, 0, 0, 0);
+}
+
+#workspaces {
+  margin: 0 4px;
+}
+
+#workspaces button {
+  margin: 4px 0;
+  padding: 0 0;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: @base05;
+}
+
+#workspaces button.visible {
+}
+
+#workspaces button.active {
+  border-radius: 6px;
+  background-color: @highlight;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#workspaces button.urgent {
+  color: rgba(238, 46, 36, 1);
+}
+
+#tray {
+  margin: 4px 4px 4px 4px;
+  border-radius: 4px;
+  /* background-color: @highlight; */
+}
+
+#tray * {
+  padding: 0 6px;
+  border-left: 1px solid @tray;
+}
+
+#tray *:first-child {
+  border-left: none;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-spotify,
+#custom-weather,
+#custom-mail,
+#custom-power,
+#clock,
+#temperature {
+  margin: 4px 2px;
+  padding: 4 8px;
+  background-color: @highlight;
+  border-radius: 6px;
+  min-width: 20px;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#pulseaudio.muted {
+  color: @base0F;
+}
+
+#pulseaudio.bluetooth {
+  color: @base0C;
+}
+
+#clock {
+  margin-left: 0px;
+  margin-right: 4px;
+  background-color: transparent;
+}
+
+#temperature.critical {
+  color: @base0F;
+}
+
+#window {
+  font-size: 0.9em;
+  font-weight: 400;
+  font-family: sans-serif;
+}
