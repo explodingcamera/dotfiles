@@ -5,7 +5,7 @@
 </div>
 <br/>
 
-![](./.github/scr.jpeg)
+![](./scr.jpeg)
 
 # setup
 
