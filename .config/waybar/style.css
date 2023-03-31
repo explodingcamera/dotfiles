@@ -1,7 +1,7 @@
 @define-color tray #181818;
-@define-color highlight #1a1c2c;
-@define-color text #f8f8f2;
-@define-color base05 #d8d8d8;
+@define-color highlight rgba(26, 28, 44, 0.4);
+@define-color text #c2c2c2;
+@define-color textlight #7d7d7d;
 @define-color base0C #86c1b9;
 @define-color base0F #a16946;
 
@@ -27,7 +27,7 @@
   padding: 0 0;
   padding-left: 7px;
   padding-right: 7px;
-  color: @base05;
+  color: @textlight;
 }
 
 #workspaces button.visible {
@@ -36,7 +36,9 @@
 #workspaces button.active {
   border-radius: 6px;
   background-color: @highlight;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+  color: @text;
+  font-weight: 600;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.urgent {
@@ -78,7 +80,7 @@
   background-color: @highlight;
   border-radius: 6px;
   min-width: 20px;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #pulseaudio.muted {
