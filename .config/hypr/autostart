@@ -18,8 +18,8 @@ sleep 2
 
 # applets
 pasystray &
-nm-applet &
+#nm-applet &
 
-jellyfin-mpv-shim &
+#jellyfin-mpv-shim &
 
 export $(dbus-launch) 
