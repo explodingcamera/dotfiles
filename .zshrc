@@ -39,3 +39,9 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 PF_ASCII=arch PF_INFO="ascii title kernel uptime pkgs memory shell" _NET_WM_NAME="Hyprland" pfetch
+# bun completions
+[ -s "/home/henry/.bun/_bun" ] && source "/home/henry/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

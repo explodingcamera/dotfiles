@@ -10,7 +10,7 @@
   "margin-bottom": 0,
   // Choose the order of the modules
   "modules-left": [
-    "wlr/workspaces",
+    "hyprland/workspaces",
     "idle_inhibitor",
     "custom/media",
     "network"
