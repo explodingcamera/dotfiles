@@ -3,17 +3,6 @@
 # fnm support (nodejs)
 eval "$(fnm env --use-on-cd)"
 
-# aliases
-function scr() {
-	grim -g "$(slurp)" - | wl-copy
-}
-
-alias fuckit="shutdown now"
-alias ls="lsd"
-alias s="kitty +kitten ssh"
-alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $1"
-alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
-
 # env
 source ~/.profile
 source ~/.secrets
@@ -45,3 +34,16 @@ PF_ASCII=arch PF_INFO="ascii title kernel uptime pkgs memory shell" _NET_WM_NAME
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# aliases
+function scr() {
+	grim -g "$(slurp)" - | wl-copy
+}
+
+alias fuckit="shutdown now"
+alias ls="lsd"
+alias s="kitty +kitten ssh"
+alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $1"
+alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
+alias cu="bunx ncu -i"
