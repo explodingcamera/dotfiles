@@ -3,6 +3,11 @@
 # fnm support (nodejs)
 eval "$(fnm env --use-on-cd)"
 
+mkd () {
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+
 # env
 source ~/.profile
 source ~/.secrets

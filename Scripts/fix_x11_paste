@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+wl-paste -t text -w sh -c 'v=$(cat); cmp -s <(xclip -selection clipboard -o)  <<< "$v" || xclip -selection clipboard <<< "$v"'
