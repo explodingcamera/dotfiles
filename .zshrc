@@ -3,9 +3,9 @@
 # fnm support (nodejs)
 eval "$(fnm env --use-on-cd)"
 
-mkd () {
-    mkdir -p -- "$1" &&
-       cd -P -- "$1"
+mkd() {
+  mkdir -p -- "$1" &&
+    cd -P -- "$1"
 }
 
 # env
@@ -21,8 +21,8 @@ fi
 
 # ZSH Plugins
 plugins=(
-	git
-	zsh-autosuggestions
+  git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -36,14 +36,12 @@ PF_ASCII=arch PF_INFO="ascii title kernel uptime pkgs memory shell" _NET_WM_NAME
 # bun completions
 [ -s "/home/henry/.bun/_bun" ] && source "/home/henry/.bun/_bun"
 
-# bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
+export PATH="$HOME/.local/bin:~/Android/Sdk/tools:$BUN_INSTALL/bin:$CARGO_HOME/bin:~/Scripts:$PATH"
 
 # aliases
 function scr() {
-	grim -g "$(slurp)" - | wl-copy
+  grim -g "$(slurp)" - | wl-copy
 }
 
 alias fuckit="shutdown now"

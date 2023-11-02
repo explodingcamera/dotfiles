@@ -10,7 +10,6 @@ export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 
 export BROWSER="vivaldi-stable"
-export PATH=$HOME/.local/bin:~/Android/Sdk/tools:~/.cargo/bin:$PATH:~/Scripts
 export ANDROID_SDK_ROOT=/home/henry/Android/Sdk
 export ANDROID_HOME=/home/henry/Android/Sdk
 export ZSH="$HOME/.config/oh-my-zsh"
