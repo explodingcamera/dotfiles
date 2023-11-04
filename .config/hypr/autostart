@@ -2,7 +2,6 @@
 
 scripts=$HOME/Scripts
 
-
 /usr/lib/polkit-kde-authentication-agent-1 &
 
 killall dunst
@@ -18,8 +17,3 @@ sleep 2
 
 # applets
 pasystray &
-#nm-applet &
-
-#jellyfin-mpv-shim &
-
-export $(dbus-launch) 

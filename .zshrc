@@ -50,3 +50,5 @@ alias s="kitty +kitten ssh"
 alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $1"
 alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
 alias cu="bunx ncu -i"
+
+alias code="code --ozone-platform=\"wayland\""
