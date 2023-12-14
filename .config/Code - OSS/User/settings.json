@@ -1,0 +1,74 @@
+{
+    "workbench.colorCustomizations": {
+        "titleBar.forground": "#13131b",
+        "titleBar.activeForeground": "#13131b",
+        "titleBar.inactiveForeground": "#13131b",
+        "titleBar.activeBackground": "#13131b",
+        "titleBar.inactiveBackground": "#13131b",
+    },
+    "redhat.telemetry.enabled": false,
+    "workbench.colorTheme": "1am",
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'VictorMono NF', 'monospace', monospace",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+        "markdown": "html"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "editor.formatOnSave": true,
+    "window.titleBarStyle": "custom",
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.commandCenter": false,
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "quickfix.biome": true
+        },
+        "editor.defaultFormatter": "biomejs.biome",
+        // "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "quickfix.biome": true
+        },
+        "editor.defaultFormatter": "biomejs.biome",
+        // "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "evenBetterToml.formatter.allowedBlankLines": 2,
+    "evenBetterToml.formatter.columnWidth": 100,
+    "evenBetterToml.formatter.compactArrays": true,
+    "evenBetterToml.formatter.compactEntries": true,
+    "evenBetterToml.formatter.alignComments": false,
+    "evenBetterToml.formatter.compactInlineTables": true,
+    "evenBetterToml.formatter.trailingNewline": true,
+    "evenBetterToml.formatter.arrayAutoCollapse": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "editor.inlayHints.enabled": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript][typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "quickfix.biome": "explicit"
+        }
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    }
+}
