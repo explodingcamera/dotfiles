@@ -25,6 +25,7 @@ plugins=(
   zsh-autosuggestions
 )
 
+# make
 source $ZSH/oh-my-zsh.sh
 
 # pnpm
@@ -36,8 +37,11 @@ PF_ASCII=arch PF_INFO="ascii title kernel uptime pkgs memory shell" _NET_WM_NAME
 # bun completions
 [ -s "/home/henry/.bun/_bun" ] && source "/home/henry/.bun/_bun"
 
+# this is
+
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$HOME/.local/bin:~/Android/Sdk/tools:$BUN_INSTALL/bin:$CARGO_HOME/bin:~/Scripts:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/bin/aarch64-linux-musl-cross/bin:~/Android/Sdk/tools:$BUN_INSTALL/bin:$CARGO_HOME/bin:$HOME/Scripts:$PATH"
+# export PATH="$HOME/.local/bin:~/Android/Sdk/tools:$BUN_INSTALL/bin:$CARGO_HOME/bin:$HOME/Scripts:$PATH"
 
 # aliases
 function scr() {
@@ -51,4 +55,4 @@ alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $1"
 alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
 alias cu="bunx ncu -i"
 
-alias code="code --ozone-platform=\"wayland\""
+# alias code="code --ozone-platform=\"wayland\""

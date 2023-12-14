@@ -1,5 +1,4 @@
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	signingkey = E5CD8F712B61D86D
@@ -20,3 +19,5 @@
 	autoSetupRemote = true
 [core]
 	editor = code --wait
+[tag]
+	gpgSign = true
