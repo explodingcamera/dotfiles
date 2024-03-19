@@ -56,3 +56,4 @@ alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
 alias cu="bunx ncu -i"
 
 # alias code="code --ozone-platform=\"wayland\""
+eval "$(zoxide init zsh)"
