@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+figlet -f big UPGRADING!
+
+figlet -f small pegasus
+ssh pegasus "doas apk update && doas apk upgrade --available"
+
+figlet -f small stuxnet
+ssh stuxnet "doas apk update && doas apk upgrade --available"
+
+figlet -f small genoa
+ssh genoa "sudo apt update && sudo apt full-upgrade"
+
+figlet -f small tempora
+yay
