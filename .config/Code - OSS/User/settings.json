@@ -79,5 +79,6 @@
     "githubPullRequests.terminalLinksHandler": "github",
     "[astro]": {
         "editor.defaultFormatter": "biomejs.biome"
-    }
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
