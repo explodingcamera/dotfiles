@@ -8,6 +8,9 @@ mkd() {
         cd -P -- "$1"
 }
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # env
 source ~/.profile
 source ~/.secrets
@@ -24,9 +27,6 @@ plugins=(
     git
     zsh-autosuggestions
 )
-
-# make
-source $ZSH/oh-my-zsh.sh
 
 # pnpm
 export PNPM_HOME="/home/henry/.local/share/pnpm"
@@ -49,11 +49,11 @@ function scr() {
 
 alias fuckit="shutdown now"
 alias ls="lsd"
+alias la="ls -lAh"
 alias s="kitty +kitten ssh"
 alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $1"
 alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $1"
-alias cu="bunx ncu -i"
+alias cu="bunx npm-check-updates -i"
 
 # alias code="code --ozone-platform=\"wayland\""
 eval "$(zoxide init zsh)"
-. "/usr/local/env"

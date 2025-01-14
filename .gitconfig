@@ -1,5 +1,5 @@
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/usr/bin/env gh auth git-credential
 [user]
 	signingkey = ED289B32C97835AA
 	email = mail@henrygressmann.de
