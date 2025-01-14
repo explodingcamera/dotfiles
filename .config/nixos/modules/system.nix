@@ -5,6 +5,13 @@
   ...
 }: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  boot.loader.systemd-boot.configurationLimit = 10;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
+  nix.settings.auto-optimise-store = true;
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = hostname;
@@ -33,7 +40,7 @@
   services.printing.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.enable = false;
   services.displayManager.autoLogin.user = username;
 
   services.pipewire = {
@@ -44,16 +51,26 @@
   };
 
   programs.zsh.enable = true;
+  programs.fish.enable = true;
   virtualisation.docker.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     # basic
+    fish
     zsh
+    zsh-autocomplete
     bash
     curl
     wget
     git
     micro
+    rofi
+    waybar
 
     docker
     docker-compose
