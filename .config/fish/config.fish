@@ -52,6 +52,7 @@ alias s="kitty +kitten ssh"
 alias ytmp3="yt-dlp --no-playlist --extract-audio --audio-format mp3 $argv[1]"
 alias ytmp3-playlist="yt-dlp --extract-audio --audio-format mp3 $argv[1]"
 alias cu="bunx ncu -i"
+alias gl="glab"
 
 # zoxide initialization for Fish
 zoxide init fish | source

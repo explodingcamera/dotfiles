@@ -21,3 +21,5 @@
 	editor = code --wait
 [tag]
 	gpgSign = true
+[advice]
+	detachedHead = false
