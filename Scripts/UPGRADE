@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 figlet -f big UPGRADING!
 
@@ -11,5 +11,12 @@ ssh stuxnet "doas apk update && doas apk upgrade --available"
 figlet -f small genoa
 ssh genoa "sudo apt update && sudo apt full-upgrade"
 
-figlet -f small tempora
+figlet -f small (hostname)
+
+rustup update
+
+bun upgrade
+
+flatpak update
+
 yay

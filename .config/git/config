@@ -1,9 +1,9 @@
 [credential "https://github.com"]
 	helper = !/usr/bin/env gh auth git-credential
 [user]
-	signingkey = 9B7AED53B8F512DE
+	signingkey = 68544F4C529B1D94
 	email = mail@henrygressmann.de
-	name = Henry Gressmann
+	name = Henry
 [commit]
 	gpgsign = true
 [init]
@@ -23,3 +23,12 @@
 	gpgSign = true
 [advice]
 	detachedHead = false
+[credential]
+	helper = 
+	helper = /usr/sbin/git-credential-manager
+	credentialStore = secretservice
+	
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://git.dawdle.space"]
+	provider = generic
