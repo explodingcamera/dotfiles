@@ -15,7 +15,7 @@
   font-size: 1.2em;
   font-weight: 400;
   color: @text;
-  background: rgba(0, 0, 0, 0);
+  background-color: @highlight;
 }
 
 #workspaces {
@@ -45,7 +45,7 @@
 #tray {
   margin: 4px 4px 4px 4px;
   border-radius: 4px;
-  /* background-color: @highlight; */
+  background-color: @highlight;
 }
 
 #tray * {
@@ -73,7 +73,7 @@
 #clock,
 #temperature {
   margin: 4px 2px;
-  padding: 4 8px;
+  padding: 0 8px;
   border-radius: 6px;
   min-width: 20px;
 }

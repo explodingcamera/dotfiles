@@ -1,0 +1,6 @@
+{
+    "device": "alsa_input.usb-Audient_Audient_iD4-00.HiFi__Mic__source",
+    "device-description": "Audient iD4 XLR Microphone",
+    "device-profile": "XLR Microphone",
+    "preset-name": "sm7b"
+}

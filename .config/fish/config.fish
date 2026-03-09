@@ -31,7 +31,7 @@ end
 env PF_ASCII=arch PF_INFO="ascii title kernel uptime pkgs memory shell" pfetch
 
 # Additional PATH entries
-set -x PATH $PNPM_HOME "$HOME/.local/bin" "$HOME/.local/bin/aarch64-linux-musl-cross/bin" "$HOME/Android/Sdk/tools" "$BUN_INSTALL/bin" "$CARGO_HOME/bin" "$HOME/Scripts" $PATH
+set -x PATH $PNPM_HOME "$HOME/.config/emacs/bin" "$HOME/.local/bin" "$HOME/.local/bin/aarch64-linux-musl-cross/bin" "$HOME/Android/Sdk/tools" "$BUN_INSTALL/bin" "$CARGO_HOME/bin" "$HOME/Scripts" $PATH
 
 # aliases
 function scr
