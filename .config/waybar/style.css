@@ -1,9 +1,9 @@
-@define-color tray #181818;
-@define-color highlight rgba(26, 28, 44, 0.4);
+@define-color highlight rgba(68, 73, 112, 0.4);
 @define-color text #c2c2c2;
 @define-color textlight #7d7d7d;
 @define-color base0C #86c1b9;
 @define-color base0F #a16946;
+@define-color tray rgba(26, 28, 44, 0.4);
 
 * {
   transition: none;
@@ -15,7 +15,7 @@
   font-size: 1.2em;
   font-weight: 400;
   color: @text;
-  background-color: @highlight;
+  background-color: @tray;
 }
 
 #workspaces {
@@ -50,7 +50,6 @@
 
 #tray * {
   padding: 0 6px;
-  border-left: 1px solid @tray;
 }
 
 #tray *:first-child {
@@ -72,9 +71,8 @@
 #custom-power,
 #clock,
 #temperature {
-  margin: 4px 2px;
-  padding: 0 8px;
-  border-radius: 6px;
+  margin: 2px 2px;
+  padding: 0 7px;
   min-width: 20px;
 }
 
@@ -98,6 +96,5 @@
 
 #window {
   font-size: 0.9em;
-  font-weight: 400;
-  font-family: sans-serif;
+  font-weight: 800;
 }

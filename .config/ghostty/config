@@ -1,8 +1,8 @@
 font-family = "VictorMono Nerd Font"
 font-size = 12
 # theme =
-background = #000000
-background-opacity = 0.78
+background = #09090b
+background-opacity = 0.6
 
 cursor-style = block
 cursor-click-to-move = true
