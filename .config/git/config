@@ -1,7 +1,7 @@
 [credential "https://github.com"]
 	helper = !/usr/bin/env gh auth git-credential
 [user]
-	signingkey = 68544F4C529B1D94
+	signingkey = 2E3D704B795EC43F
 	email = mail@henrygressmann.de
 	name = Henry
 [commit]
