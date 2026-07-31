@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot Region
+Comment=Copy a selected screen region to the clipboard
+Exec=/home/henry/Scripts/scr
+Icon=camera-photo
+Terminal=false
+Categories=Graphics;
+Keywords=screenshot;capture;region;clipboard;

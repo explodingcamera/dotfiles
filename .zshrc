@@ -14,7 +14,7 @@ plugins=(
 
 # aliases
 function scr() {
-    grim -g "$(slurp)" - | wl-copy
+    "$HOME/Scripts/scr"
 }
 
 function mkd() {

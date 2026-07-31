@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Color Picker
+Comment=Pick a screen color and copy it to the clipboard
+Exec=/home/henry/Scripts/color
+Icon=applications-graphics
+Terminal=false
+Categories=Graphics;
+Keywords=color;picker;eyedropper;clipboard;

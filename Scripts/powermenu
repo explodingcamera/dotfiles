@@ -1,33 +1,29 @@
 #!/usr/bin/env sh
 
 # Options for powermenu
-logout=" Logout"
+logout=" Logout"
 shutdown=" Shutdown"
-reboot=" Reboot"
+reboot=" Reboot"
 
 # Get answer from user via rofi
-selected_option=$(echo "$logout
-$reboot
-$shutdown" | rofi -dmenu\
+selected_option=$(printf '%s\n' "$logout" "$reboot" "$shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
-                  -config "~/.config/rofi/powermenu.rasi"\
+                  -config "$HOME/.config/rofi/powermenu.rasi"\
                   -width "15"\
                   -lines 3\
                   -line-margin 3\
                   -line-padding 10\
                   -scrollbar-width "0" )
 
-# Do something based on selected option
-if [ "$selected_option" == "$logout" ]
-then
-    $HOME/Scripts/stop_hyprland
-elif [ "$selected_option" == "$shutdown" ]
-then
-    systemctl poweroff
-elif [ "$selected_option" == "$reboot" ]
-then
-    systemctl reboot
-else
-    echo "No match"
-fi
+case "$selected_option" in
+    "$logout")
+        loginctl terminate-session "$XDG_SESSION_ID"
+        ;;
+    "$shutdown")
+        systemctl poweroff
+        ;;
+    "$reboot")
+        systemctl reboot
+        ;;
+esac

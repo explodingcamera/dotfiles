@@ -4,7 +4,7 @@
  *******************************************************/
 
 configuration {
-    font:                           "Hack Nerd Font Mono Regular 12";
+    font:                           "VictorMono Nerd Font 12";
     show-icons:                     false;
     icon-theme:                     "Arc-X-D";
     scroll-method:                  0;
@@ -118,4 +118,3 @@ textbox-prompt-colon {
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
-

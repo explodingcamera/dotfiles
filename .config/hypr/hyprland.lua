@@ -79,6 +79,12 @@ hl.config({
     },
     decoration = {
         rounding = 8,
+        blur = {
+            enabled = true,
+            size = 5,
+            passes = 2,
+            new_optimizations = true,
+        },
         shadow = {
             enabled = false,
             range = 10,
@@ -126,7 +132,14 @@ hl.bind("SUPER + Z", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + Space", hl.dsp.exec_cmd(scripts .. "spotlight"))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({}))
-hl.bind("SUPER + X", hl.dsp.exec_cmd(scripts .. "kill_active_window"))
+hl.bind("SUPER + X", function()
+    local window = hl.get_active_window()
+    if window ~= nil and window.class == "Steam" then
+        hl.exec_cmd("xdotool windowunmap $(xdotool getactivewindow)")
+    else
+        hl.dispatch(hl.dsp.window.close())
+    end
+end)
 hl.bind("SUPER + Escape", hl.dsp.exec_cmd(scripts .. "powermenu"))
 hl.bind("SUPER + ALT + M", hl.dsp.exit())
 hl.bind("Print", hl.dsp.exec_cmd("scr"))
@@ -187,3 +200,5 @@ hl.window_rule({ match = { class = "steam" }, border_size = 0 })
 hl.window_rule({ match = { class = "steam" }, immediate = true })
 
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
+hl.layer_rule({ match = { namespace = "rofi" }, blur = true, ignore_alpha = 0.2 })
+hl.layer_rule({ match = { namespace = "selection" }, no_anim = true })
