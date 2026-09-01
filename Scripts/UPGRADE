@@ -2,14 +2,16 @@
 
 figlet -f big UPGRADING!
 
-figlet -f small pegasus
-ssh pegasus "doas apk update && doas apk upgrade --available"
+if test (hostname) = tempora
+    figlet -f small pegasus
+    ssh pegasus "doas apk update && doas apk upgrade --available"
 
-figlet -f small stuxnet
-ssh stuxnet "doas apk update && doas apk upgrade --available"
+    figlet -f small stuxnet
+    ssh stuxnet "doas apk update && doas apk upgrade --available"
 
-figlet -f small genoa
-ssh genoa "sudo apt update && sudo apt full-upgrade"
+    figlet -f small genoa
+    ssh genoa "sudo apt update && sudo apt full-upgrade && sudo ./update_chromedriver.sh"
+end
 
 figlet -f small (hostname)
 

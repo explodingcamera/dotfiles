@@ -50,6 +50,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd(scripts .. "launch_waybar")
     hl.exec_cmd("pasystray")
+    hl.exec_cmd("hyprsunset")
     hl.exec_cmd("dunst")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("jellyfin-mpv-shim")
@@ -151,6 +152,10 @@ hl.bind("SUPER + left", hl.dsp.focus({ direction = "l" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "r" }))
 hl.bind("SUPER + up", hl.dsp.focus({ direction = "u" }))
 hl.bind("SUPER + down", hl.dsp.focus({ direction = "d" }))
+hl.bind("SUPER + SHIFT + left", hl.dsp.window.move({ direction = "l" }))
+hl.bind("SUPER + SHIFT + right", hl.dsp.window.move({ direction = "r" }))
+hl.bind("SUPER + SHIFT + up", hl.dsp.window.move({ direction = "u" }))
+hl.bind("SUPER + SHIFT + down", hl.dsp.window.move({ direction = "d" }))
 
 for workspace = 1, 10 do
     local key = workspace % 10

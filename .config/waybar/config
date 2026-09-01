@@ -23,7 +23,10 @@
         "clock"
     ],
     // Modules configuration
-    "hyprland/workspaces": {},
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
+    },
     "keyboard-state": {
         "numlock": false,
         "capslock": false,
