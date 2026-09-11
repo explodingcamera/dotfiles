@@ -1,0 +1,61 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"share": "disabled",
+	"lsp": true,
+	"permission": {
+		"skill": "deny",
+		"todowrite": "allow",
+		"external_directory": {
+			"~/.local/share/cargo/**": "allow",
+			"/tmp/opencode": "allow"
+		},
+		"edit": {
+			"~/.local/share/cargo/**": "deny"
+		},
+		"bash": {
+			"*": "ask",
+			"rm *": "deny",
+			"grep *": "allow",
+			"tee *": "allow",
+			"cat *": "allow",
+			"zizmor *": "allow",
+			"shellcheck *": "allow",
+			"pinact *": "allow",
+			"cargo run *": "allow",
+			"cargo test *": "allow",
+			"cargo check *": "allow",
+			"cargo clippy *": "allow",
+			"cargo fmt *": "allow",
+			"cargo build *": "allow",
+			"cargo bench *": "allow",
+			"cargo tree *": "allow",
+			"cargo samply *": "allow",
+			"cargo expand *": "allow",
+			"cargo dev *": "allow",
+			"cargo add *": "allow",
+			"cargo migrate *": "allow",
+			"cargo run --example *": "allow",
+			"head *": "allow",
+			"gh pr view *": "allow",
+			"gh issue view *": "allow",
+			"tail *": "allow",
+			"ls *": "allow",
+			"biome *": "allow",
+			"rg *": "allow",
+			"tokei *": "allow",
+			"wc *": "allow",
+			"RUST_BACKTRACE=full cargo *": "allow",
+			"RUST_LOG=trace cargo *": "allow",
+			"bun run *": "allow",
+			"git status *": "allow",
+			"git diff *": "allow",
+			"git log *": "allow",
+			"git blame *": "allow",
+			"git show *": "allow",
+			"git remote -v": "allow",
+			"git branch --show-current": "allow",
+			"git rev-parse --abrev-ref HEAD": "allow",
+			"git ls-files *": "allow"
+		}
+	}
+}
