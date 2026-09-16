@@ -1,59 +1,45 @@
 # Agent Instructions
 
-## Any Prose
+## Prose
 
-make it like google dev docs style. More dead prose. No aphorisms, no flourishes. Simple.
+- Use Google developer documentation style: plain, direct, and without aphorisms or flourishes.
 
-## Code Style
+## Code
 
-- Keep changes concise, pragmatic, and easy to review.
-- Prefer clean, medium-length methods over lots of tiny abstractions.
-- Avoid adding helpers that are only used once unless they clearly reduce code without adding much complexity.
-- Use descriptive names for functions, variables, and modules.
-- Avoid adding new dependencies unless they are clearly worth it.
+- Read nearby code first. Match its patterns and preserve its style unless there is a clear reason to change it.
+- Keep changes focused, concise, pragmatic, and easy to review.
+- Prefer straightforward code and clean, medium-length methods over clever abstractions or many small helpers.
+- Avoid single-use helpers unless they clearly reduce code without adding much complexity.
+- Follow the language and ecosystem's idioms for naming, structure, and API design. Use descriptive names for functions, variables, and modules.
+- Keep test names concise. Name the behavior being verified without restating every setup detail.
+- Avoid new dependencies unless they are clearly worthwhile.
+- For files around 500 lines or longer, consider simplifying or splitting them. Simplify first, and split only at clear boundaries.
 
-## Docs / Changelogs
+## Documentation and changelogs
 
-- When adding a new feature, add a changelog entry and update the README if applicable.
-- Don't add changelog entries for changes to things that have not been part of a released version yet.
-- Try to avoid using semicolons, prefer using commas and conjunctions to separate items in a list.
+- For new features, add a changelog entry and update the README when applicable.
+- Do not add changelog entries for unreleased functionality.
+- Avoid semicolons in prose. Use commas or conjunctions in lists.
 
-## Rust / Cargo
+## Rust and Cargo
 
 - `CARGO_HOME` is `~/.local/share/cargo`.
-- Add Rust dependencies with `cargo add` instead of manually editing `Cargo.toml`.
-- Use the latest version (no version specified when adding) unless there is a clear reason to pin a version.
-- pub(super) or higher should have simple doc comments, pub should have more detailed doc comments / potentially examples.
+- Add dependencies with `cargo add` rather than editing `Cargo.toml`.
+- Use the latest version unless there is a clear reason to pin one.
+- Prefer `impl` methods when behavior naturally belongs to a type or uses its state. Use free functions for standalone operations.
+- Add simple doc comments to `pub(super)` or higher items. Give `pub` items more detail and examples when useful.
 
-## TypeScript / Bun
+## TypeScript and Bun
 
-- run biome using the `biome` command available in the path
+- Run Biome with the `biome` command available in `PATH`.
 
-## Code Changes
+## Working tree
 
-- Read nearby code first and match existing patterns before introducing new ones.
-- Keep edits focused on the requested change.
-- Prefer straightforward code over clever abstractions.
-- When touching existing code, preserve the current style unless there is a clear reason to change it.
+- The user may edit or stage files while you work. Do not assume uncommitted changes are yours.
+- Preserve unrelated changes and work around them.
 
-## Refactoring
+## Project state
 
-- If a file is getting too long, roughly 500+ lines, consider whether it should be simplified or split.
-- Prefer simplifying the structure before introducing new modules.
-- Split files only when it creates clearer boundaries
-
-## Git / Working Tree
-
-- The user may edit, stage, or modify files while you are working.
-- Do not assume every uncommitted change was made by you.
-- Preserve unrelated user changes and work around them.
-
-## Project State
-
-- The project may still be early-stage and unreleased.
-- Migrations or backwards-compatibility changes may not be needed unless explicitly requested or clearly necessary.
-
-## Repo Notes
-
-- `AGENTS.md` or `PLAN.md` may be gitignored.
-- They may not show up in grep, git log, or normal tracked-file searches, but they can still be edited and used by agents.
+- The project may be early-stage and unreleased.
+- Add migrations or backward compatibility only when requested or clearly necessary.
+- Check for `AGENTS.md` and `PLAN.md` directly. They may be gitignored and absent from search results, tracked-file lists, or Git history.
