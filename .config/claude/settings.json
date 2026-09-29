@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(grep *)",
+      "Bash(tee *)",
+      "Bash(cat *)",
+      "Bash(zizmor *)",
+      "Bash(shellcheck *)",
+      "Bash(pinact *)",
+      "Bash(cargo run *)",
+      "Bash(cargo test *)",
+      "Bash(cargo check *)",
+      "Bash(cargo clippy *)",
+      "Bash(cargo fmt *)",
+      "Bash(cargo build *)",
+      "Bash(cargo bench *)",
+      "Bash(cargo tree *)",
+      "Bash(cargo samply *)",
+      "Bash(cargo expand *)",
+      "Bash(cargo dev *)",
+      "Bash(cargo add *)",
+      "Bash(cargo migrate *)",
+      "Bash(head *)",
+      "Bash(gh pr view *)",
+      "Bash(gh issue view *)",
+      "Bash(tail *)",
+      "Bash(ls *)",
+      "Bash(biome *)",
+      "Bash(rg *)",
+      "Bash(tokei *)",
+      "Bash(wc *)",
+      "Bash(RUST_BACKTRACE=full cargo *)",
+      "Bash(RUST_LOG=trace cargo *)",
+      "Bash(bun run *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git blame *)",
+      "Bash(git show *)",
+      "Bash(git remote -v)",
+      "Bash(git branch --show-current)",
+      "Bash(git rev-parse --abrev-ref HEAD)",
+      "Bash(git ls-files *)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Edit(~/.local/share/cargo/**)"
+    ],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "~/.local/share/cargo"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "sh ~/.config/claude/statusline.sh",
+    "refreshInterval": 1
+  },
+  "spinnerTipsEnabled": false,
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "promptSuggestionEnabled": false,
+  "tui": "fullscreen",
+  "theme": "custom:aura",
+  "showTurnDuration": false
+}

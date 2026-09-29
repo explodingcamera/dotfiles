@@ -1,12 +1,45 @@
 {
+	"$schema": "https://opencode.ai/config.json",
 	"share": "disabled",
 	"lsp": true,
+	"mcp": {
+		"chrome-devtools": {
+			"type": "local",
+			"command": [
+				"npx",
+				"-y",
+				"chrome-devtools-mcp@1.10.1",
+				"--headless",
+				"--allowed-url-pattern=http://localhost:*/*",
+				"--allowed-url-pattern=https://localhost:*/*",
+				"--allowed-url-pattern=http://127.0.0.1:*/*",
+				"--allowed-url-pattern=https://127.0.0.1:*/*",
+				"--no-usage-statistics",
+				"--no-performance-crux"
+			],
+			"enabled": true,
+			"timeout": 30000
+		}
+	},
 	"permissions": [
 		{ "action": "skill", "resource": "*", "effect": "deny" },
+		{ "action": "browser_*", "resource": "*", "effect": "deny" },
 		{ "action": "todowrite", "resource": "*", "effect": "allow" },
-		{ "action": "external_directory", "resource": "~/.local/share/cargo/**", "effect": "allow" },
-		{ "action": "external_directory", "resource": "/tmp/opencode", "effect": "allow" },
-		{ "action": "edit", "resource": "~/.local/share/cargo/**", "effect": "deny" },
+		{
+			"action": "external_directory",
+			"resource": "~/.local/share/cargo/**",
+			"effect": "allow"
+		},
+		{
+			"action": "external_directory",
+			"resource": "/tmp/opencode",
+			"effect": "allow"
+		},
+		{
+			"action": "edit",
+			"resource": "~/.local/share/cargo/**",
+			"effect": "deny"
+		},
 		{ "action": "shell", "resource": "*", "effect": "ask" },
 		{ "action": "shell", "resource": "rm *", "effect": "deny" },
 		{ "action": "shell", "resource": "grep *", "effect": "allow" },
@@ -28,7 +61,11 @@
 		{ "action": "shell", "resource": "cargo dev *", "effect": "allow" },
 		{ "action": "shell", "resource": "cargo add *", "effect": "allow" },
 		{ "action": "shell", "resource": "cargo migrate *", "effect": "allow" },
-		{ "action": "shell", "resource": "cargo run --example *", "effect": "allow" },
+		{
+			"action": "shell",
+			"resource": "cargo run --example *",
+			"effect": "allow"
+		},
 		{ "action": "shell", "resource": "head *", "effect": "allow" },
 		{ "action": "shell", "resource": "gh pr view *", "effect": "allow" },
 		{ "action": "shell", "resource": "gh issue view *", "effect": "allow" },
@@ -38,8 +75,16 @@
 		{ "action": "shell", "resource": "rg *", "effect": "allow" },
 		{ "action": "shell", "resource": "tokei *", "effect": "allow" },
 		{ "action": "shell", "resource": "wc *", "effect": "allow" },
-		{ "action": "shell", "resource": "RUST_BACKTRACE=full cargo *", "effect": "allow" },
-		{ "action": "shell", "resource": "RUST_LOG=trace cargo *", "effect": "allow" },
+		{
+			"action": "shell",
+			"resource": "RUST_BACKTRACE=full cargo *",
+			"effect": "allow"
+		},
+		{
+			"action": "shell",
+			"resource": "RUST_LOG=trace cargo *",
+			"effect": "allow"
+		},
 		{ "action": "shell", "resource": "bun run *", "effect": "allow" },
 		{ "action": "shell", "resource": "git status *", "effect": "allow" },
 		{ "action": "shell", "resource": "git diff *", "effect": "allow" },
@@ -47,8 +92,16 @@
 		{ "action": "shell", "resource": "git blame *", "effect": "allow" },
 		{ "action": "shell", "resource": "git show *", "effect": "allow" },
 		{ "action": "shell", "resource": "git remote -v", "effect": "allow" },
-		{ "action": "shell", "resource": "git branch --show-current", "effect": "allow" },
-		{ "action": "shell", "resource": "git rev-parse --abrev-ref HEAD", "effect": "allow" },
+		{
+			"action": "shell",
+			"resource": "git branch --show-current",
+			"effect": "allow"
+		},
+		{
+			"action": "shell",
+			"resource": "git rev-parse --abrev-ref HEAD",
+			"effect": "allow"
+		},
 		{ "action": "shell", "resource": "git ls-files *", "effect": "allow" }
 	]
 }

@@ -1,0 +1,26 @@
+{
+  "name": "Aura",
+  "base": "dark",
+  "overrides": {
+    "claude": "#a277ff",
+    "claudeShimmer": "#f694ff",
+    "text": "#fafafa",
+    "inactive": "#888888",
+    "subtle": "#4e4e4e",
+    "suggestion": "#a277ff",
+    "permission": "#a277ff",
+    "promptBorder": "#a277ff",
+    "promptBorderShimmer": "#a277ff",
+    "autoAccept": "#888888",
+    "planMode": "#686868",
+    "success": "#61ffca",
+    "warning": "#ffca85",
+    "error": "#ff6767",
+    "userMessageBackground": "#1d1b26",
+    "userMessageBackgroundHover": "#262333",
+    "bashMessageBackgroundColor": "#1d1b26",
+    "memoryBackgroundColor": "#1d1b26",
+    "diffAdded": "#354933",
+    "diffRemoved": "#3f191a"
+  }
+}

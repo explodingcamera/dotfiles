@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+geometry=$(slurp) || exit 0
+sleep 0.05
+grim -g "$geometry" - | wl-copy

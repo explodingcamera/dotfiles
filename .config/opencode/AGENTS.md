@@ -13,6 +13,7 @@
 - Follow the language and ecosystem's idioms for naming, structure, and API design. Use descriptive names for functions, variables, and modules.
 - Keep test names concise. Name the behavior being verified without restating every setup detail.
 - Avoid new dependencies unless they are clearly worthwhile.
+- Do not modify lock files.
 - For files around 500 lines or longer, consider simplifying or splitting them. Simplify first, and split only at clear boundaries.
 
 ## Documentation and changelogs
@@ -32,6 +33,10 @@
 ## TypeScript and Bun
 
 - Run Biome with the `biome` command available in `PATH`.
+
+## GitHub Actions
+
+- Use only `zizmor` to check GitHub Actions workflows.
 
 ## Working tree
 
