@@ -44,7 +44,6 @@
       "Bash(git ls-files *)"
     ],
     "deny": [
-      "Bash(rm *)",
       "Edit(~/.local/share/cargo/**)"
     ],
     "defaultMode": "acceptEdits",
@@ -64,7 +63,9 @@
     }
   },
   "promptSuggestionEnabled": false,
+  "showThinkingSummaries": true,
   "tui": "fullscreen",
   "theme": "custom:aura",
-  "showTurnDuration": false
+  "showTurnDuration": false,
+  "model": "opus"
 }
