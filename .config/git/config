@@ -27,7 +27,6 @@
 	helper =
 	helper = /usr/sbin/git-credential-manager
 	credentialStore = secretservice
-
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [credential "https://git.dawdle.space"]

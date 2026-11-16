@@ -72,6 +72,9 @@ hl.config({
             output = "current",
         },
     },
+    render = {
+        cm_auto_hdr = false, -- disable auto hdr when fullscreening
+    },
     general = {
         gaps_in = 4,
         gaps_out = 8,
